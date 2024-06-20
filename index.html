@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма для банковской карты</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="card-form">
+            <h2>Информация о банковской карте</h2>
+            <label for="bank-name">Название банка:</label>
+            <select id="bank-name" name="bankName" required>
+                <option value="Sberbank">Sberbank</option>
+                <option value="Tinkoff">Tinkoff</option>
+            </select>
+
+            <label for="payment-system">Тип платежной системы:</label>
+            <select id="payment-system" name="paymentSystem" required>
+                <option value="visa">Visa</option>
+                <option value="mastercard">MasterCard</option>
+            </select>
+
+            <label for="card-number">Номер карты (16 цифр):</label>
+            <input type="text" id="card-number" name="cardNumber" maxlength="16" pattern="\d{16}" required>
+
+            <label for="card-holder">Имя держателя карты:</label>
+            <input type="text" id="card-holder" name="cardHolder" required>
+
+            <label for="expiry-month">Месяц окончания:</label>
+            <input type="text" id="expiry-month" name="expiryMonth" maxlength="2" pattern="\d{2}" required>
+
+            <label for="expiry-year">Год окончания:</label>
+            <input type="text" id="expiry-year" name="expiryYear" maxlength="4" pattern="\d{4}" required>
+
+            <button type="submit">Отправить</button>
+        </form>
+
+        <div class="card-preview" id="card-preview">
+            <div class="card-logoe" id="card-logoe"></div>
+            <div class="card-logo" id="card-logo"></div>
+            <div class="card-bank" id="card-bank"></div>
+            <div class="card-number" id="card-number-preview"></div>
+            <div class="card-holder" id="card-holder-preview"></div>
+            <div class="card-expiry" id="card-expiry-preview"></div>
+        </div>
+    </div>
+
+    <table id="cards-table">
+        <thead>
+            <tr>
+                <th>Название банка</th>
+                <th>Тип платежной системы</th>
+                <th>Номер карты</th>
+                <th>Имя держателя карты</th>
+                <th>Срок действия</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

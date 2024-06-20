@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+form {
+    flex: 1;
+    max-width: 400px;
+    margin-right: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+}
+
+.card-preview {
+    flex: 1;
+    max-width: 300px;
+    height: 180px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    position: relative;
+    background: #f7f7f7;
+}
+
+.card-logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card-logoe {
+    position: center;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card-bank {
+    font-weight: bold;
+}
+
+.card-number, .card-holder, .card-expiry {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
